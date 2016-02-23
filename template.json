@@ -1,0 +1,15 @@
+{
+	"name": "newproject",
+	"discard": [
+		"README.md",
+		"template.json"
+	],
+	"parse": [
+		"PROJECT-README",
+    "jade/index.jade"
+	],
+	"move": [
+		{ "PROJECT-README": "README.md" }
+	],
+	"complete": "git init {{ name }}"
+}
