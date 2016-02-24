@@ -1,11 +1,12 @@
 var gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  jade = require('gulp-jade');
+  plugins = require('gulp-load-plugins')(),
+  browserSync = require('browser-sync').create();
 
 gulp.task('sass', function() {
   return gulp.src("./sass/main.scss")
     .pipe(sass({outputStyle: 'expanded'}))
-    .pipe(gulp.dest("./css"));
+    .pipe(gulp.dest("./css"))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('jade', function() {
@@ -15,6 +16,13 @@ gulp.task('jade', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(['./sass/*.scss', './sass/**/*.scss'], ['sass']);
+  browserSync.init({
+    server: './'
+  });
+
+	gulp.watch(['./sass/main.scss', './sass/**/*.scss'], ['sass']);
 	gulp.watch('./jade/*.jade', ['jade']);
+  gulp.watch('./*.html').on('change', browserSync.reload);
 });
+
+gulp.task('default', ['watch']);
