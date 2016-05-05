@@ -9,9 +9,9 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('jade', function() {
-  return gulp.src("./jade/*.jade")
-    .pipe(plugins.jade({pretty: true}))
+gulp.task('pug', function() {
+  return gulp.src("./pug/*.pug")
+    .pipe(plugins.pug({pretty: true}))
     .pipe(gulp.dest("./"))
     .pipe(browserSync.stream());
 });
@@ -22,7 +22,7 @@ gulp.task('watch', function() {
   });
 
 	gulp.watch(['./sass/main.scss', './sass/**/*.scss'], ['sass']);
-	gulp.watch('./jade/*.jade', ['jade']);
+	gulp.watch('./pug/*.pug', ['pug']);
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
