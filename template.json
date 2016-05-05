@@ -6,7 +6,7 @@
 	],
 	"parse": [
 		"PROJECT-README",
-    "jade/index.jade"
+    "pug/index.pug"
 	],
 	"move": [
 		{ "PROJECT-README": "README.md" }
