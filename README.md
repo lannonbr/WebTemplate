@@ -10,7 +10,7 @@ project to generate actual projects from the template.
 To use this, enter the command below after downloading pollinate
 
 ```
-pollinate lannonbr/WebTemplate '{ "name": "ProjectName" }'
+pollinate lannonbr/WebTemplate --name ProjectName --description="Description"
 ```
 This will create a ProjectName directory and create a git repository inside it after the
 files are created and parsed.
