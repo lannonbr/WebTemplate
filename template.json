@@ -6,10 +6,11 @@
 	],
 	"parse": [
 		"PROJECT-README",
-    "pug/index.pug"
+    	"pug/index.pug"
 	],
 	"move": [
 		{ "PROJECT-README": "README.md" }
 	],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	"complete": "git init {{ name }}"
 }

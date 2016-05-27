@@ -2,7 +2,7 @@
 
 A repo to hold my current standard workflow for building websites.
 
-This uses the [everysquare/pollinate](https://github.com/everysquare/pollinate)
+This uses the [howardroark/pollinate](https://github.com/howardroark/pollinate)
 project to generate actual projects from the template.
 
 ## Usage
